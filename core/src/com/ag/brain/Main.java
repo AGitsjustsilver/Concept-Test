@@ -13,8 +13,7 @@ public class Main extends ApplicationAdapter {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		//Files should include the core \ assets \ filename
-		img = new Texture("core/assets/badlogic.jpg");
+		img = new Texture(Constants.BADLOGIC_IMG);
 	}
 
 	@Override
