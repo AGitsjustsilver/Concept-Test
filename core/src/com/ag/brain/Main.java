@@ -37,15 +37,14 @@ public class Main extends ApplicationAdapter {
 	public class defActor extends Actor{
 		Texture t = new Texture(Constants.BOX_CORNERS);
 		Sprite sprite = new Sprite(t);
-		float x = 0, y = 0;
+
 		public defActor(float posX, float posY, float width, float height){
-			this.x = posX;
-			this.y = posY;
-			sprite.setSize(width,height);
+			sprite.setBounds(posX,posY,width,height);
 		}
 
 		@Override
 		public void draw(Batch batch,float alpha){
+//			batch.draw(sprite,x,y);
 			sprite.draw(batch);
 		}
 	}
@@ -69,18 +68,18 @@ public class Main extends ApplicationAdapter {
 		topStage = new Stage();
 		topStage.getActors().addAll(
 				//left Stats box
-				new defActor(0,(Constants.HEIGHT/2)+1,Constants.WIDTH/4, Constants.HEIGHT/2),
+				new defActor(0,(Constants.HEIGHT/3),Constants.WIDTH/3, (Constants.HEIGHT - Constants.HEIGHT/3)),
 				//where the character and world are
 				myActor);
 
 		botStage = new Stage();
 		botStage.getActors().addAll(
 				//left choice box
-				new defActor(0,0,Constants.WIDTH/2, Constants.HEIGHT/2),
+				new defActor(0,0,Constants.WIDTH/2, Constants.HEIGHT/3),
 				//Middle info box
-				new defActor((Constants.WIDTH/2)+1,0,Constants.WIDTH/4, Constants.HEIGHT/2),
+				new defActor((Constants.WIDTH/2),0,Constants.WIDTH/4, Constants.HEIGHT/3),
 				//right options box
-				new defActor(((Constants.WIDTH/2)+(Constants.WIDTH/4))+1,0,Constants.WIDTH/4, Constants.HEIGHT/2));
+				new defActor(((Constants.WIDTH/2)+(Constants.WIDTH/4)),0,Constants.WIDTH/4, Constants.HEIGHT/3));
 
 //		Group top = new Group();
 //		top.getChildren().addAll(

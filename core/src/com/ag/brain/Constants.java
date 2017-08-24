@@ -15,7 +15,7 @@ public class Constants {
     public static final String BOX_CORNERS = "core/assets/boxEdge.jpg";
 
     //bounds
-    public static final int WIDTH = 600;
-    public static final int HEIGHT = 500;
+    public static final int WIDTH = 800;
+    public static final int HEIGHT = 550;
 
 }
